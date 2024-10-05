@@ -1,4 +1,4 @@
-FROM python:3.11.6-alpine
+FROM python:slim-bullseye
 LABEL authors="williamdavidsuarezarevalo"
 WORKDIR /usr/src/app
 COPY requirements.txt .
@@ -8,3 +8,4 @@ COPY mqttcon.py .
 COPY .env .
 CMD ["python","-u","main.py"]
 #ENTRYPOINT ["top", "-b"]
+
